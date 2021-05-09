@@ -1,0 +1,20 @@
+
+<table class="table table-bordered table-striped" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+  <thead>
+     <tr>
+       <th *ngFor="let column of columns" class="text-center">
+         {{column.data}}
+       </th>
+     </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comment of comments">
+      <td>{{comment.postId}}</td>
+      <td>{{comment.id}}</td>
+      <td>{{comment.name}}</td>
+      <td>{{comment.email}}</td>
+      <td>{{comment.body}}</td>
+    </tr>
+  </tbody>
+</table>
+
